@@ -762,7 +762,7 @@ module policies 'modules/policies.bicep' = {
 }
 
 #disable-next-line BCP081
-resource mc 'Microsoft.ContainerService/managedClusters@2026-04-01' = {
+resource mc 'Microsoft.ContainerService/managedClusters@2026-04-02-preview' = {
   name: clusterName
   location: location
   tags: {
@@ -982,6 +982,9 @@ resource mc 'Microsoft.ContainerService/managedClusters@2026-04-01' = {
       imageCleaner: {
         enabled: true
         intervalHours: 120 // 5 days
+      }
+      securityGating: {
+        enabled: true
       }
       azureKeyVaultKms: {
         enabled: false // Not enabled in the this deployment, as it is not used. Enable as needed.

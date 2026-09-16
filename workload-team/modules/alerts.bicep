@@ -18,7 +18,7 @@ var kubernetesAlertRuleGroupDescription = 'Kubernetes Alert RuleGroup-Recommende
 
 /*** EXISTING RESOURCES ***/
 
-resource mc 'Microsoft.ContainerService/managedClusters@2024-03-02-preview' existing = {
+resource mc 'Microsoft.ContainerService/managedClusters@2026-04-02-preview' existing = {
   name: clusterName
 }
 
