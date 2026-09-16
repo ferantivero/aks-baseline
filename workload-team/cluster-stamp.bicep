@@ -214,7 +214,7 @@ resource dce 'Microsoft.Insights/dataCollectionEndpoints@2024-03-11' = {
 }
 
 // A data collection rule that collects PrometheusMetrics from pods, nodes and cluster and configure Azure monitor workspace as destination
-resource dcr 'Microsoft.Insights/dataCollectionRules@2023-03-11' = {
+resource dcr 'Microsoft.Insights/dataCollectionRules@2024-03-11' = {
   name: 'MSProm-${location}-${clusterName}'
   kind: 'Linux'
   location: location
@@ -282,7 +282,7 @@ resource dcrAssociation 'Microsoft.Insights/dataCollectionRuleAssociations@2024-
 }
 
 // A data collection rule that collects ContainerInsights logs from pods, nodes and cluster and configure Azure Log Analytics workspace as destination
-resource dcrContainerInsights 'Microsoft.Insights/dataCollectionRules@2023-03-11' = {
+resource dcrContainerInsights 'Microsoft.Insights/dataCollectionRules@2024-03-11' = {
   name: 'MSCI-${location}-${mc.name}'
   kind: 'Linux'
   location: location
