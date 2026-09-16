@@ -104,7 +104,7 @@ resource pdAnonymousContainerRegistryAccessDisallowed 'Microsoft.Authorization/p
   scope: tenant()
 }
 
-resource paAnonymousContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyAssignments@2024-04-01' = {
+resource paAnonymousContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyAssignments@2026-06-01' = {
   name: guid(resourceGroup().id, pdAnonymousContainerRegistryAccessDisallowed.id)
   location: 'global'
   scope: resourceGroup()
@@ -127,7 +127,7 @@ resource pdAdminAccountContainerRegistryAccessDisallowed 'Microsoft.Authorizatio
   scope: tenant()
 }
 
-resource paAdminAccountContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyAssignments@2024-04-01' = {
+resource paAdminAccountContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyAssignments@2026-06-01' = {
   name: guid(resourceGroup().id, pdAdminAccountContainerRegistryAccessDisallowed.id)
   location: 'global'
   scope: resourceGroup()
