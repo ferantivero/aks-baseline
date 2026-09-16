@@ -202,7 +202,7 @@ resource amw 'Microsoft.Monitor/accounts@2023-04-03' = {
 }
 
 // A data collection endpoint to process Prometheus scraped metrics so they can be ingested by Azure Monitor
-resource dce 'Microsoft.Insights/dataCollectionEndpoints@2023-03-11' = {
+resource dce 'Microsoft.Insights/dataCollectionEndpoints@2024-03-11' = {
   name: 'MSProm-${location}-${clusterName}'
   location: location
   kind: 'Linux'
