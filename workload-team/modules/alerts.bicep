@@ -644,7 +644,7 @@ resource kubernetesAlertRuleGroupName_Cluster_level 'Microsoft.AlertsManagement/
   }
 }
 
-resource sqrPodFailed 'Microsoft.Insights/scheduledQueryRules@2022-06-15' = {
+resource sqrPodFailed 'Microsoft.Insights/scheduledQueryRules@2026-03-01' = {
   name: 'PodFailedScheduledQuery'
   location: location
   properties: {
