@@ -51,7 +51,7 @@ resource snetClusterIngress 'Microsoft.Network/virtualNetworks/subnets@2023-11-0
 
 /*** RESOURCES ***/
 
-resource vnetMiClusterControlPlaneDnsZoneContributorRole_roleAssignment 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
+resource vnetMiClusterControlPlaneDnsZoneContributorRole_roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   scope: targetVirtualNetwork
   name: guid(targetVirtualNetwork.id, dnsZoneContributorRole.id, clusterControlPlaneIdentityName)
   properties: {
