@@ -18,12 +18,12 @@ param targetVirtualNetworkName string
 
 /*** EXISTING SUBSCRIPTION RESOURCES ***/
 
-resource networkContributorRole 'Microsoft.Authorization/roleDefinitions@2018-01-01-preview' existing = {
+resource networkContributorRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
   name: '4d97b98b-1d4f-4787-a291-c67834d212e7'
   scope: subscription()
 }
 
-resource dnsZoneContributorRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
+resource dnsZoneContributorRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
   name: 'b12aa53e-6015-4669-85d0-8515ebb3ae7f'
   scope: subscription()
 }
