@@ -28,7 +28,7 @@ resource amw 'Microsoft.Monitor/accounts@2023-04-03' existing = {
 
 /*** RESOURCES ***/
 
-resource alaRgRecommendations 'Microsoft.Insights/activityLogAlerts@2020-10-01' = {
+resource alaRgRecommendations 'Microsoft.Insights/activityLogAlerts@2026-01-01' = {
   name: 'AllAzureAdvisorAlert'
   location: 'Global'
   properties: {
