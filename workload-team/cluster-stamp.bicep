@@ -273,7 +273,7 @@ resource dcr_diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-0
 }
 
 // Associate a data collection rule to the AKS Cluster
-resource dcrAssociation 'Microsoft.Insights/dataCollectionRuleAssociations@2023-03-11' = {
+resource dcrAssociation 'Microsoft.Insights/dataCollectionRuleAssociations@2024-03-11' = {
   name: 'MSProm-${location}-${clusterName}'
   scope: mc
   properties: {
@@ -412,7 +412,7 @@ resource dcrContainerInsights_diagnosticSettings 'Microsoft.Insights/diagnosticS
 }
 
 // Associate DCR for ContainerInsights to the AKS Cluster
-resource dcraContainerInsights 'Microsoft.Insights/dataCollectionRuleAssociations@2023-03-11' = {
+resource dcraContainerInsights 'Microsoft.Insights/dataCollectionRuleAssociations@2024-03-11' = {
   name: 'MSCI-${location}-${clusterName}'
   scope: mc
   properties: {
