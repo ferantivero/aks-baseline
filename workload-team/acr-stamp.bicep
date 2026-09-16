@@ -163,7 +163,7 @@ resource dnsPrivateZoneAcr 'Microsoft.Network/privateDnsZones@2020-06-01' = {
 }
 
 // The Container Registry that the AKS cluster will be authorized to use to pull images.
-resource acrAks 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
+resource acrAks 'Microsoft.ContainerRegistry/registries@2026-03-01-preview' = {
   name: 'acraks${subRgUniqueString}'
   location: location
   dependsOn: [
@@ -183,6 +183,9 @@ resource acrAks 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
     policies: {
       quarantinePolicy: {
         status: 'disabled'
+      }
+      softDeletePolicy: {
+        retentionDays: 7
       }
       trustPolicy: {
         type: 'Notary'

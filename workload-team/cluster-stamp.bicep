@@ -118,7 +118,7 @@ resource privateDnsZoneContributorRole 'Microsoft.Authorization/roleDefinitions@
 // from the solution.
 
 // Azure Container Registry
-resource acr 'Microsoft.ContainerRegistry/registries@2023-07-01' existing = {
+resource acr 'Microsoft.ContainerRegistry/registries@2026-03-01-preview' existing = {
   scope: resourceGroup()
   name: 'acraks${subRgUniqueString}'
 }
