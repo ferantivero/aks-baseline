@@ -1179,10 +1179,12 @@ resource mcFlux_extension 'Microsoft.KubernetesConfiguration/extensions@2025-03-
 }
 
 // Bootstraps your cluster using content from your repo.
-resource mc_fluxConfiguration 'Microsoft.KubernetesConfiguration/fluxConfigurations@2023-05-01' = {
+resource mc_fluxConfiguration 'Microsoft.KubernetesConfiguration/fluxConfigurations@2025-04-01' = {
   scope: mc
   name: 'bootstrap'
   properties: {
+    reconciliationWaitDuration: 'PT5M'
+    waitForReconciliation: true
     scope: 'cluster'
     namespace: 'flux-system'
     sourceKind: 'GitRepository'
