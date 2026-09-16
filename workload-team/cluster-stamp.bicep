@@ -132,7 +132,7 @@ resource la 'Microsoft.OperationalInsights/workspaces@2023-09-01' existing = {
 // Kubernetes namespace: a0008 -- this doesn't technically exist prior to deployment, but is required as a resource reference later in the template
 // to support Azure RBAC-managed API Server access, scoped to the namespace level.
 #disable-next-line BCP081 // this namespaces child type doesn't have a defined bicep type yet.
-resource nsA0008 'Microsoft.ContainerService/managedClusters/namespaces@2022-01-02-preview' existing = {
+resource nsA0008 'Microsoft.ContainerService/managedClusters/namespaces@2025-02-02-preview' existing = {
   parent: mc
   name: 'a0008'
 }
