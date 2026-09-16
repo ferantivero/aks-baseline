@@ -1150,11 +1150,12 @@ resource mc_diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01
 }
 
 // Ensures that flux add-on (extension) is installed.
-resource mcFlux_extension 'Microsoft.KubernetesConfiguration/extensions@2023-05-01' = {
+resource mcFlux_extension 'Microsoft.KubernetesConfiguration/extensions@2025-03-01' = {
   scope: mc
   name: 'flux'
   properties: {
     extensionType: 'microsoft.flux'
+    autoUpgradeMode: 'compatible'
     autoUpgradeMinorVersion: true
     releaseTrain: 'Stable'
     scope: {
