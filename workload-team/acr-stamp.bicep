@@ -99,7 +99,7 @@ resource sqrDailyDataCapBreach 'Microsoft.Insights/scheduledQueryRules@2022-06-1
 }
 
 // Apply the built-in 'Container registries should have anonymous authentication disabled' policy. Azure RBAC only is allowed.
-resource pdAnonymousContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyDefinitions@2021-06-01' existing = {
+resource pdAnonymousContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyDefinitions@2026-06-01' existing = {
   name: '9f2dea28-e834-476c-99c5-3507b4728395'
   scope: tenant()
 }
@@ -122,7 +122,7 @@ resource paAnonymousContainerRegistryAccessDisallowed 'Microsoft.Authorization/p
 }
 
 // Apply the built-in 'Container registries should have local admin account disabled' policy. Azure RBAC only is allowed.
-resource pdAdminAccountContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyDefinitions@2021-06-01' existing = {
+resource pdAdminAccountContainerRegistryAccessDisallowed 'Microsoft.Authorization/policyDefinitions@2026-06-01' existing = {
   name: 'dc921057-6b28-4fbe-9b83-f7bec05db6c2'
   scope: tenant()
 }
