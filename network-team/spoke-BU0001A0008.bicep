@@ -63,7 +63,7 @@ resource routeNextHopToFirewall 'Microsoft.Network/routeTables@2023-11-01' = {
 }
 
 // Default NSG on the AKS nodepools. Feel free to constrict further.
-resource nsgNodepoolSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' = {
+resource nsgNodepoolSubnet 'Microsoft.Network/networkSecurityGroups@2025-07-01' = {
   name: 'nsg-${clusterVNetName}-nodepools'
   location: location
   properties: {
@@ -72,7 +72,7 @@ resource nsgNodepoolSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' 
 }
 
 // Default NSG on the AKS private cluster subnet. Feel free to constrict further.
-resource nsgPrivateClusterSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' = {
+resource nsgPrivateClusterSubnet 'Microsoft.Network/networkSecurityGroups@2025-07-01' = {
   name: 'nsg-${clusterVNetName}-privatecluster'
   location: location
   properties: {
@@ -107,7 +107,7 @@ resource nsgNodepoolSubnet_diagnosticsSettings 'Microsoft.Insights/diagnosticSet
 }
 
 // Default NSG on the AKS internal load balancer subnet. Feel free to constrict further.
-resource nsgInternalLoadBalancerSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' = {
+resource nsgInternalLoadBalancerSubnet 'Microsoft.Network/networkSecurityGroups@2025-07-01' = {
   name: 'nsg-${clusterVNetName}-aksilbs'
   location: location
   properties: {
@@ -142,7 +142,7 @@ resource nsgInternalLoadBalancerSubnet_diagnosticsSettings 'Microsoft.Insights/d
 }
 
 // NSG on the Application Gateway subnet.
-resource nsgAppGwSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' = {
+resource nsgAppGwSubnet 'Microsoft.Network/networkSecurityGroups@2025-07-01' = {
   name: 'nsg-${clusterVNetName}-appgw'
   location: location
   properties: {
@@ -248,7 +248,7 @@ resource nsgAppGwSubnet_diagnosticsSettings 'Microsoft.Insights/diagnosticSettin
 }
 
 // NSG on the Private Link subnet.
-resource nsgPrivateLinkEndpointsSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' = {
+resource nsgPrivateLinkEndpointsSubnet 'Microsoft.Network/networkSecurityGroups@2025-07-01' = {
   name: 'nsg-${clusterVNetName}-privatelinkendpoints'
   location: location
   properties: {

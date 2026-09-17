@@ -83,7 +83,7 @@ resource laHub_diagnosticsSettings 'Microsoft.Insights/diagnosticSettings@2021-0
 }
 
 // NSG around the Azure Bastion Subnet.
-resource nsgBastionSubnet 'Microsoft.Network/networkSecurityGroups@2023-11-01' = {
+resource nsgBastionSubnet 'Microsoft.Network/networkSecurityGroups@2025-07-01' = {
   name: 'nsg-${location}-bastion'
   location: location
   properties: {
