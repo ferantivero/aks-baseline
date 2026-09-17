@@ -1282,7 +1282,7 @@ resource st_diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01
   }
 }
 
-resource wafPolicy 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2023-11-01' = {
+resource wafPolicy 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2025-07-01' = {
   name: 'waf-${clusterName}'
   location: location
   properties: {
