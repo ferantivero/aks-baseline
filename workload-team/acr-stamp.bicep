@@ -145,7 +145,7 @@ resource paAdminAccountContainerRegistryAccessDisallowed 'Microsoft.Authorizatio
 }
 
 // Azure Container Registry will be exposed via Private Link, set up the related Private DNS zone and virtual network link to the spoke.
-resource dnsPrivateZoneAcr 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+resource dnsPrivateZoneAcr 'Microsoft.Network/privateDnsZones@2024-06-01' = {
   name: 'privatelink.azurecr.io'
   location: 'global'
   properties: {}

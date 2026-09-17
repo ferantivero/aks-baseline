@@ -657,7 +657,7 @@ module ndEnsureClusterIdentityHasRbacToSelfManagedResources 'modules/role-assign
 }
 
 // Enabling Azure Key Vault Private Link support.
-resource pdzKv 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+resource pdzKv 'Microsoft.Network/privateDnsZones@2024-06-01' = {
   name: 'privatelink.vaultcore.azure.net'
   location: 'global'
 
@@ -752,7 +752,7 @@ resource pdzMiClusterControlPlaneDnsZoneContributorRole_roleAssignment 'Microsof
   }
 }
 
-resource pdzAksIngress 'Microsoft.Network/privateDnsZones@2020-06-01' = {
+resource pdzAksIngress 'Microsoft.Network/privateDnsZones@2024-06-01' = {
   name: aksIngressDomainName
   location: 'global'
 
