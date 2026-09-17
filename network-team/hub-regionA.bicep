@@ -423,7 +423,7 @@ resource pipAzureBastion 'Microsoft.Network/publicIPAddresses@2024-10-01' = {
   }
 }
 
-resource azureBastion 'Microsoft.Network/bastionHosts@2024-10-01' = {
+resource azureBastion 'Microsoft.Network/bastionHosts@2025-07-01' = {
   name: 'ab-${location}'
   location: location
   sku: {
