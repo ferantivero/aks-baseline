@@ -31,7 +31,7 @@ resource hubVirtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' existi
 }
 
 // This is the firewall that was deployed in 'hub-default.bicep'
-resource hubFirewall 'Microsoft.Network/azureFirewalls@2023-11-01' existing = {
+resource hubFirewall 'Microsoft.Network/azureFirewalls@2025-07-01' existing = {
   scope: hubResourceGroup
   name: 'fw-${location}'
 }

@@ -763,7 +763,7 @@ resource fwPolicy 'Microsoft.Network/firewallPolicies@2023-11-01' = {
 }
 
 // This is the regional Azure Firewall that all regional spoke networks can egress through.
-resource hubFirewall 'Microsoft.Network/azureFirewalls@2023-11-01' = {
+resource hubFirewall 'Microsoft.Network/azureFirewalls@2025-07-01' = {
   name: 'fw-${location}'
   location: location
   zones: [
