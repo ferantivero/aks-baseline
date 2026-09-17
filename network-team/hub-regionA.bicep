@@ -472,7 +472,7 @@ resource ipgNodepoolSubnet 'Microsoft.Network/ipGroups@2023-11-01' = {
 }
 
 // Azure Firewall starter policy
-resource fwPolicy 'Microsoft.Network/firewallPolicies@2023-11-01' = {
+resource fwPolicy 'Microsoft.Network/firewallPolicies@2025-07-01' = {
   name: 'fw-policies-${location}'
   location: location
   dependsOn: [
