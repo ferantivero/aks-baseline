@@ -193,7 +193,7 @@ resource hubVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existi
 /*** RESOURCES ***/
 
 // An Azure Monitor workspace where cluster metrics related to Prometheus are collected
-resource amw 'Microsoft.Monitor/accounts@2023-04-03' = {
+resource amw 'Microsoft.Monitor/accounts@2025-10-03' = {
   name: 'amw-${clusterName}'
   location: location
   properties: {

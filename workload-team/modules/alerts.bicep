@@ -22,7 +22,7 @@ resource mc 'Microsoft.ContainerService/managedClusters@2026-04-02-preview' exis
   name: clusterName
 }
 
-resource amw 'Microsoft.Monitor/accounts@2023-04-03' existing = {
+resource amw 'Microsoft.Monitor/accounts@2025-10-03' existing = {
   name: 'amw-${mc.name}'
 }
 
