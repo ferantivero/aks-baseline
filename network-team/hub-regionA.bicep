@@ -463,7 +463,7 @@ resource azureBastion_diagnosticSettings 'Microsoft.Insights/diagnosticSettings@
 }
 
 // This holds IP addresses of known nodepool subnets in spokes.
-resource ipgNodepoolSubnet 'Microsoft.Network/ipGroups@2023-11-01' = {
+resource ipgNodepoolSubnet 'Microsoft.Network/ipGroups@2025-07-01' = {
   name: 'ipg-${location}-AksNodepools'
   location: location
   properties: {
