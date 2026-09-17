@@ -1308,7 +1308,7 @@ resource wafPolicy 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPo
   }
 }
 
-resource agw 'Microsoft.Network/applicationGateways@2023-11-01' = {
+resource agw 'Microsoft.Network/applicationGateways@2025-07-01' = {
   name: agwName
   location: location
   identity: {
