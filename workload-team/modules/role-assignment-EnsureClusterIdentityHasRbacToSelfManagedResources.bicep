@@ -30,7 +30,7 @@ resource dnsZoneContributorRole 'Microsoft.Authorization/roleDefinitions@2022-05
 
 /*** EXISTING HUB RESOURCES ***/
 
-resource targetVirtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' existing = {
+resource targetVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existing = {
   name: targetVirtualNetworkName
 }
 

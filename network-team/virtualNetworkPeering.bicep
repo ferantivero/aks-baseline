@@ -6,7 +6,7 @@ param localVnetName string
 @minLength(79)
 param remoteVirtualNetworkId string
 
-resource virtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' existing = {
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existing = {
   name: localVnetName
 }
 

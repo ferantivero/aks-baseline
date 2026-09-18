@@ -146,7 +146,7 @@ resource targetResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' exi
 }
 
 // Spoke virtual network
-resource targetVirtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' existing = {
+resource targetVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existing = {
   scope: targetResourceGroup
   name: last(split(targetVnetResourceId, '/'))
 

@@ -21,7 +21,7 @@ resource hubResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existi
   name: split(hubVnetResourceId,'/')[4]
 }
 
-resource hubVirtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' existing = {
+resource hubVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existing = {
   scope: hubResourceGroup
   name: last(split(hubVnetResourceId,'/'))
 
@@ -325,7 +325,7 @@ resource nsgPrivateLinkEndpointsSubnet_diagnosticsSettings 'Microsoft.Insights/d
 // The spoke virtual network.
 // 65,536 (-reserved) IPs available to the workload, split across two subnets for AKS,
 // one for App Gateway and one for Private Link endpoints.
-resource vnetSpoke 'Microsoft.Network/virtualNetworks@2023-11-01' = {
+resource vnetSpoke 'Microsoft.Network/virtualNetworks@2025-07-01' = {
   name: clusterVNetName
   location: location
   properties: {

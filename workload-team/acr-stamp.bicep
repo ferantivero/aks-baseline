@@ -23,7 +23,7 @@ resource spokeResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' exis
   name: split(targetVnetResourceId,'/')[4]
 }
 
-resource spokeVirtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' existing = {
+resource spokeVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existing = {
   scope: spokeResourceGroup
   name: last(split(targetVnetResourceId,'/'))
 

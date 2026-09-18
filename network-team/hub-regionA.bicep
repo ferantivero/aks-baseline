@@ -284,7 +284,7 @@ resource nsgBastionSubnet_diagnosticSettings 'Microsoft.Insights/diagnosticSetti
 }
 
 // The regional hub network
-resource vnetHub 'Microsoft.Network/virtualNetworks@2023-11-01' = {
+resource vnetHub 'Microsoft.Network/virtualNetworks@2025-07-01' = {
   name: 'vnet-${location}-hub'
   location: location
   properties: {
