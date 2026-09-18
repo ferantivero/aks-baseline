@@ -10,7 +10,7 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' existing 
   name: localVnetName
 }
 
-resource peering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-11-01' = {
+resource peering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2025-07-01' = {
   name: 'to_${last(split(remoteVirtualNetworkId, '/'))}'
   parent: virtualNetwork
   properties: {
