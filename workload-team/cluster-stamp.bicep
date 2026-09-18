@@ -421,7 +421,7 @@ resource dcraContainerInsights 'Microsoft.Insights/dataCollectionRuleAssociation
 }
 
 // A query pack to hold any custom quries you may want to write to monitor your cluster or workloads
-resource qpBaselineQueryPack 'Microsoft.OperationalInsights/queryPacks@2019-09-01' = {
+resource qpBaselineQueryPack 'Microsoft.OperationalInsights/queryPacks@2025-07-01' = {
   location: location
   name: 'AKS baseline bundled queries'
   properties: {}
