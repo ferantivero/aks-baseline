@@ -33,7 +33,7 @@ param hubVirtualNetworkBastionSubnetAddressSpace string = '10.200.0.96/27'
 
 // This Log Analytics workspace stores logs from the regional hub network, its spokes, and bastion.
 // Log analytics is a regional resource, as such there will be one workspace per hub (region)
-resource laHub 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
+resource laHub 'Microsoft.OperationalInsights/workspaces@2025-07-01' = {
   name: 'la-hub-${location}'
   location: location
   properties: {

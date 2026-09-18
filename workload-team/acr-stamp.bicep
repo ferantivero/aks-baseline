@@ -37,7 +37,7 @@ resource spokeVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' exis
 // This Log Analytics workspace will be the log sink for all resources in the cluster resource group.
 // This includes ACR, the AKS cluster, Key Vault, etc.
 // It also is the Container Insights log sink for the AKS cluster.
-resource laAks 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
+resource laAks 'Microsoft.OperationalInsights/workspaces@2025-07-01' = {
   name: 'la-aks-${subRgUniqueString}'
   location: location
   properties: {

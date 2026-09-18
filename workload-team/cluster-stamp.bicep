@@ -124,7 +124,7 @@ resource acr 'Microsoft.ContainerRegistry/registries@2026-03-01-preview' existin
 }
 
 // Log Analytics Workspace
-resource la 'Microsoft.OperationalInsights/workspaces@2023-09-01' existing = {
+resource la 'Microsoft.OperationalInsights/workspaces@2025-07-01' existing = {
   scope: resourceGroup()
   name: 'la-${clusterName}'
 }

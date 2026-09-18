@@ -37,7 +37,7 @@ resource hubFirewall 'Microsoft.Network/azureFirewalls@2025-07-01' existing = {
 }
 
 // This is the networking log analytics workspace (in the hub)
-resource laHub 'Microsoft.OperationalInsights/workspaces@2023-09-01' existing = {
+resource laHub 'Microsoft.OperationalInsights/workspaces@2025-07-01' existing = {
   scope: hubResourceGroup
   name: 'la-hub-${location}'
 }
