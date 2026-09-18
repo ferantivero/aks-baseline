@@ -57,7 +57,7 @@ var kubernetesVersion = '1.36.0'
 
 /*** EXISTING SUBSCRIPTION RESOURCES ***/
 
-resource nodeResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
+resource nodeResourceGroup 'Microsoft.Resources/resourceGroups@2025-04-01' existing = {
   name: 'rg-${clusterName}-nodepools'
   scope: subscription()
 }
@@ -140,7 +140,7 @@ resource nsA0008 'Microsoft.ContainerService/managedClusters/namespaces@2025-02-
 /*** EXISTING SPOKE RESOURCES ***/
 
 // Spoke resource group
-resource targetResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
+resource targetResourceGroup 'Microsoft.Resources/resourceGroups@2025-04-01' existing = {
   scope: subscription()
   name: split(targetVnetResourceId, '/')[4]
 }

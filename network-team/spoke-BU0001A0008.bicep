@@ -16,7 +16,7 @@ var clusterVNetName = 'vnet-spoke-${orgAppId}-00'
 /*** EXISTING HUB RESOURCES ***/
 
 // This is 'rg-enterprise-networking-hubs-$region' if using the default values in the walkthrough
-resource hubResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
+resource hubResourceGroup 'Microsoft.Resources/resourceGroups@2025-04-01' existing = {
   scope: subscription()
   name: split(hubVnetResourceId,'/')[4]
 }

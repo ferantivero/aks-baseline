@@ -18,7 +18,7 @@ var subRgUniqueString = uniqueString('aks', subscription().subscriptionId, resou
 
 /*** EXISTING RESOURCES ***/
 
-resource spokeResourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' existing = {
+resource spokeResourceGroup 'Microsoft.Resources/resourceGroups@2025-04-01' existing = {
   scope: subscription()
   name: split(targetVnetResourceId,'/')[4]
 }
