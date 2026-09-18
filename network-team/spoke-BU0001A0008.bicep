@@ -461,7 +461,7 @@ resource vnetSpoke_diagnosticSettings 'Microsoft.Insights/diagnosticSettings@202
 
 // Used as primary public entry point for cluster. Expected to be assigned to an Azure Application Gateway.
 // This is a public facing IP, and would be best behind a DDoS Policy (not deployed simply for cost considerations)
-resource pipPrimaryClusterIp 'Microsoft.Network/publicIPAddresses@2023-11-01' = {
+resource pipPrimaryClusterIp 'Microsoft.Network/publicIPAddresses@2025-07-01' = {
   name: 'pip-${orgAppId}-00'
   location: location
   sku: {
