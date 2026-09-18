@@ -674,13 +674,14 @@ resource pdzKv 'Microsoft.Network/privateDnsZones@2024-06-01' = {
   }
 }
 
-resource peKv 'Microsoft.Network/privateEndpoints@2023-11-01' = {
+resource peKv 'Microsoft.Network/privateEndpoints@2025-07-01' = {
   name: 'pe-${kv.name}'
   location: location
   properties: {
     subnet: {
       id: targetVirtualNetwork::snetPrivatelinkendpoints.id
     }
+    ipVersionType: 'IPv4'
     privateLinkServiceConnections: [
       {
         name: 'to_${targetVirtualNetwork.name}'
