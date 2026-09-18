@@ -428,7 +428,7 @@ resource qpBaselineQueryPack 'Microsoft.OperationalInsights/queryPacks@2025-07-0
 }
 
 // Example query that shows all scraped Prometheus metrics
-resource qPrometheusAll 'Microsoft.OperationalInsights/queryPacks/queries@2019-09-01' = {
+resource qPrometheusAll 'Microsoft.OperationalInsights/queryPacks/queries@2025-07-01' = {
   parent: qpBaselineQueryPack
   name: guid(resourceGroup().id, 'PrometheusAll', clusterName)
   properties: {
