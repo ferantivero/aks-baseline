@@ -45,10 +45,11 @@ resource laHub 'Microsoft.OperationalInsights/workspaces@2023-09-01' existing = 
 /*** RESOURCES ***/
 
 // Next hop to the regional hub's Azure Firewall
-resource routeNextHopToFirewall 'Microsoft.Network/routeTables@2023-11-01' = {
+resource routeNextHopToFirewall 'Microsoft.Network/routeTables@2025-07-01' = {
   name: 'route-to-${location}-hub-fw'
   location: location
   properties: {
+    disablePeeringRoute: 'All'
     routes: [
       {
         name: 'r-nexthop-to-fw'
