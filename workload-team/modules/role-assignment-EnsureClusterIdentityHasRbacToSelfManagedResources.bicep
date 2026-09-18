@@ -34,17 +34,17 @@ resource targetVirtualNetwork 'Microsoft.Network/virtualNetworks@2025-07-01' exi
   name: targetVirtualNetworkName
 }
 
-resource snetClusterNodes 'Microsoft.Network/virtualNetworks/subnets@2023-11-01' existing = {
+resource snetClusterNodes 'Microsoft.Network/virtualNetworks/subnets@2025-07-01' existing = {
   parent: targetVirtualNetwork
   name: 'snet-clusternodes'
 }
 
-resource snetPrivateCluster 'Microsoft.Network/virtualNetworks/subnets@2023-11-01' existing = {
+resource snetPrivateCluster 'Microsoft.Network/virtualNetworks/subnets@2025-07-01' existing = {
   parent: targetVirtualNetwork
   name: 'snet-privatecluster'
 }
 
-resource snetClusterIngress 'Microsoft.Network/virtualNetworks/subnets@2023-11-01' existing = {
+resource snetClusterIngress 'Microsoft.Network/virtualNetworks/subnets@2025-07-01' existing = {
   parent: targetVirtualNetwork
   name: 'snet-clusteringressservices'
 }
