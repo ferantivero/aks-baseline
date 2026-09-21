@@ -516,7 +516,7 @@ resource miAppGatewayFrontend 'Microsoft.ManagedIdentity/userAssignedIdentities@
   }
 }
 
-resource kv 'Microsoft.KeyVault/vaults@2026-03-01-preview' = {
+resource kv 'Microsoft.KeyVault/vaults@2026-02-01' = {
   name: 'kv-${clusterName}'
   location: location
   properties: {
