@@ -1254,7 +1254,7 @@ module ndEnsureClusterUserAssignedHasRbacToManageVMSS 'modules/role-assignment-E
   }
 }
 
-resource st 'Microsoft.EventGrid/systemTopics@2025-07-15-preview' = {
+resource st 'Microsoft.EventGrid/systemTopics@2025-02-15' = {
   name: clusterName
   location: location
   properties: {
