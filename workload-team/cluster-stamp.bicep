@@ -63,49 +63,49 @@ resource nodeResourceGroup 'Microsoft.Resources/resourceGroups@2025-04-01' exist
 }
 
 // Built-in Azure RBAC role that is applied to a cluster to indicate they can be considered a user/group of the cluster, subject to additional RBAC permissions
-resource serviceClusterUserRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource serviceClusterUserRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: '4abbcc35-e782-43d8-92c5-2d3f1bd2253f'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that can be applied to a cluster or a namespace to grant read and write privileges to that scope for a user or group
-resource clusterAdminRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource clusterAdminRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: 'b1ff04bb-8a4e-4dc4-8eb5-8693973ce19b'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that can be applied to a cluster or a namespace to grant read privileges to that scope for a user or group
-resource clusterReaderRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource clusterReaderRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: '7f6c6a51-bcf8-42ba-9220-52d62157d7db'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that can be applied to an Azure Container Registry to grant the authority pull container images. Granted to the AKS cluster's kubelet identity.
-resource acrPullRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource acrPullRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: '7f951dda-4ed3-4680-a7ca-43fe172d538d'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that is applied a Key Vault to grant with metadata, certificates, keys and secrets read privileges. Granted to App Gateway's managed identity and our web app routing profile's managed identity.
-resource keyVaultReaderRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource keyVaultReaderRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: '21090545-7ca7-4776-b22c-e363652d74d2'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that is applied to a Key Vault to grant with secrets content read privileges. Granted to our web app routing profile's managed identity.
-resource keyVaultSecretsUserRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource keyVaultSecretsUserRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: '4633458b-17de-408a-b874-0445c86b69e6'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that is applied to a Key Vault to grant certificate read privileges. Granted to the CSI Secrets Store Driver managed identity so it can use certificates.
-resource keyVaultCertificateUserRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource keyVaultCertificateUserRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: 'db79e9a7-68ee-4b58-9aeb-b90e7c24fcba'
   scope: subscription()
 }
 
 // Built-in Azure RBAC role that is applied to a Private DNS Zone to grant with contributor privileges. Granted our web app routing profile's managed identity, which uses it to modify the DNS zone.
-resource privateDnsZoneContributorRole 'Microsoft.Authorization/roleDefinitions@2022-05-01-preview' existing = {
+resource privateDnsZoneContributorRole 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
   name: 'b12aa53e-6015-4669-85d0-8515ebb3ae7f'
   scope: subscription()
 }
