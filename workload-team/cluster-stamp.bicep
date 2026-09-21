@@ -779,7 +779,7 @@ module policies 'modules/policies.bicep' = {
 }
 
 #disable-next-line BCP081
-resource mc 'Microsoft.ContainerService/managedClusters@2026-04-02-preview' = {
+resource mc 'Microsoft.ContainerService/managedClusters@2026-06-01' = {
   name: clusterName
   location: location
   tags: {
