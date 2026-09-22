@@ -1200,8 +1200,7 @@ resource mc_fluxConfiguration 'Microsoft.KubernetesConfiguration/fluxConfigurati
   scope: mc
   name: 'bootstrap'
   properties: {
-    reconciliationWaitDuration: 'PT5M'
-    waitForReconciliation: true
+    waitForReconciliation: false
     scope: 'cluster'
     namespace: 'flux-system'
     sourceKind: 'GitRepository'
