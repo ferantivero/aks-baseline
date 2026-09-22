@@ -1000,14 +1000,14 @@ resource mc 'Microsoft.ContainerService/managedClusters@2026-06-01' = {
         enabled: true
         intervalHours: 120 // 5 days
       }
-      securityGating: {
-        enabled: true
-      }
       azureKeyVaultKms: {
         enabled: false // Not enabled in the this deployment, as it is not used. Enable as needed.
       }
       defender: {
         logAnalyticsWorkspaceResourceId: la.id
+        securityGating: {
+          enabled: true
+        }
         securityMonitoring: {
           enabled: true
         }
