@@ -811,11 +811,7 @@ resource mc 'Microsoft.ContainerService/managedClusters@2026-06-01' = {
         orchestratorVersion: kubernetesVersion
         enableNodePublicIP: false
         maxPods: 30
-        availabilityZones: [
-          '1'
-          '2'
-          '3'
-        ]
+        availabilityZones: ['auto']
         upgradeSettings: {
           maxSurge: '33%'
         }
@@ -844,11 +840,7 @@ resource mc 'Microsoft.ContainerService/managedClusters@2026-06-01' = {
         orchestratorVersion: kubernetesVersion
         enableNodePublicIP: false
         maxPods: 30
-        availabilityZones: [
-          '1'
-          '2'
-          '3'
-        ]
+        availabilityZones: ['auto']
         upgradeSettings: {
           maxSurge: '33%'
         }
